@@ -1,0 +1,9 @@
+.app-menu-icon {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .app-menu-icon {
+    display: block;
+  }
+}

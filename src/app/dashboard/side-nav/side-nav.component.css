@@ -1,0 +1,16 @@
+.app-sidenav-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.app-sidenav-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.app-sidenav {
+  width: 180px;
+}
+.wrapper {
+  margin: 20px;
+}

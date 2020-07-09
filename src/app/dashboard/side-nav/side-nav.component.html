@@ -1,0 +1,16 @@
+<mat-drawer-container class="app-sidenav-container">
+  <mat-drawer #sidenav class="app-sidenav" [mode]="isSmallScreen() ? 'over' : 'side'" [opened]="!isSmallScreen()">
+    <mat-toolbar color="accent">
+      <button mat-button [routerLink]="['/dashboard']">Dashboard</button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item *ngFor='let link of links' [routerLink]=[link.url]>{{link.name}}</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="app-sidenav-content">
+    <app-toolbar (sideToggle)="sidenav.toggle()"></app-toolbar>
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
